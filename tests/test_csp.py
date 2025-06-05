@@ -3,8 +3,8 @@
 # Since: Feb 22, 2024                             #
 # Copyright: DAFF Hitchhikers working group       #
 # Version: N/A                                    #
-# Maintainer: Ant Bilic                           #
-# Email: ant.bilic@aff.gov.au                     #
+# Maintainer: Ante Bilic                          #
+# Email: ante.bilic.mr@gmail.com                  #
 # Status: N/A                                     #
 ###################################################
 
