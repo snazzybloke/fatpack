@@ -17,24 +17,24 @@ with open("requirements.in", "r", encoding="utf-8") as f:
     # Remove comments and pip options (e.g. '--no-binary')
     install_reqs = [s.strip().split("#")[0].split('--')[0] for s in install_reqs]
 
-setup(name="flatpack22B",
+setup(name="flatpack",
       version="0.1",
       description="Container & goods pathway modelling workflow",
       author="Ant Bilic, BSM DAFF",
-      url="https://dev.azure.com/agriculturegovau/RRRA/_git/22B",
-      # package_dir={'': 'flatpack22b'},
-      # packages=find_packages(where='flatpack22b'),
-      packages=["flatpack22b",
-              "flatpack22b.preproc",
-              "flatpack22b.src",
-              "flatpack22b.pipeline",
-              "flatpack22b.plot",
-              "flatpack22b.data",
-              "flatpack22b.samples",
+      url="https://github.com/snazzybloke/fatpack",
+      # package_dir={'': 'flatpack'},
+      # packages=find_packages(where='flatpack'),
+      packages=["flatpack",
+              "flatpack.preproc",
+              "flatpack.src",
+              "flatpack.pipeline",
+              "flatpack.plot",
+              "flatpack.data",
+              "flatpack.samples",
               ],
       # make sure this is the repo ( with .git), or no CSV file will get installed
       include_package_data=True,
-      package_data={"data" :["flatpack22b/data"], "samples": ['flatpack22b.samples']},
+      package_data={"data" :["flatpack/data"], "samples": ['flatpack.samples']},
       setup_requires=[
           'pip-tools'
       ],
