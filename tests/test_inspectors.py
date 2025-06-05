@@ -3,8 +3,8 @@
 # Since: Feb 22, 2024                             #
 # Copyright: DAFF Hitchhikers working group       #
 # Version: N/A                                    #
-# Maintainer: Ant Bilic                           #
-# Email: ant.bilic@aff.gov.au                     #
+# Maintainer: Ante Bilic                          #
+# Email: ante.bilic.mr@gmail.com                  #
 # Status: N/A                                     #
 ###################################################
 
@@ -15,15 +15,15 @@ Testing the flatpack.src.inspectors module
 from copy import deepcopy
 from pandas.core.frame import DataFrame
 from flatpack.src.inspectors import (rn_random,
-                                        get_column,
-                                        load_ccv_lookup_table,
-                                        set_prior_n_ccv,
-                                        get_num_ccv_samples,
-                                        SamplingRegime,
-                                        BasicSampler,
-                                        RandomSampler,
-                                        CSP1Sampler,
-                                        CSP3Sampler)
+                                      get_column,
+                                      load_ccv_lookup_table,
+                                      set_prior_n_ccv,
+                                      get_num_ccv_samples,
+                                      SamplingRegime,
+                                      BasicSampler,
+                                      RandomSampler,
+                                      CSP1Sampler,
+                                      CSP3Sampler)
 import pytest
 
 
