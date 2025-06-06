@@ -2,8 +2,10 @@
 
 The package simulates the current and future (either with SCHS or CSP1/CSP3
 sampling protocols for the CAL containers) states of external shipping container
-contamination risk management. The flowcharts of both states are shown in
-the images found in the Flowchart directory.
+contamination risk management. The flowcharts of both states are shown below:
+
+![Image](https://github.com/user-attachments/assets/62912066-fa28-41d3-9cd2-175b6ae1ad00)
+
 ![Image](https://github.com/user-attachments/assets/fee218ea-b88f-4441-997c-70bb96f5ad9d)
 
 
