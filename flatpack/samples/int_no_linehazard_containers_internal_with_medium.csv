@@ -1,0 +1,11 @@
+,CALSourceCountry,RuralDest,TypeOfGoods,I_TG,SCHS,CALSourceCountryMedium,importer,contamination
+0,False,False,normal,False,no,False,7,no
+1,True,False,none,False,no,False,0,no
+2,False,True,normal,False,no,False,5,no
+3,False,True,normal,False,no,False,0,yes
+4,True,False,none,False,no,False,1,no
+5,False,False,normal,False,no,False,6,no
+6,True,False,none,False,yes5,False,0,yes
+7,True,False,none,False,yes5,True,2,no
+8,False,True,exceptions,False,no,False,4,no
+9,False,True,exceptions,False,no,False,0,yes
