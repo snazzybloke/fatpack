@@ -1,0 +1,33 @@
+[project]
+name = "flatpack"
+version = "0.1"
+description = "Container & goods pathway modelling workflow"
+readme = "README.md"
+authors = [
+    {name = "Ante Bilic",email = "ante.bilic.mr@gmail.com"},
+]
+classifiers = [
+    "Programming Language :: Python :: 3.12",
+    "Programming Language :: Python :: 3.13",
+]
+dependencies = [
+    "Jinja2",
+    "colorcet",
+    "iteround",
+    "loguru",
+    "matplotlib",
+    "numpy",
+    "pandas",
+    "pyyaml",
+    "scipy",
+    "sympy",
+    "tqdm",
+]
+requires-python = ">=3.12"
+
+[project.urls]
+Homepage = "https://github.com/snazzybloke/fatpack"
+
+[build-system]
+requires = ["pdm-backend"]
+build-backend = "pdm.backend"
