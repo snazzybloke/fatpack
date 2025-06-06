@@ -34,7 +34,7 @@ setup(name="flatpack",
               ],
       # make sure this is the repo ( with .git), or no CSV file will get installed
       include_package_data=True,
-      package_data={"data" :["flatpack/data"], "samples": ['flatpack.samples']},
+      package_data={"data": ["flatpack/data"], "samples": ["flatpack/samples"]},
       setup_requires=[
           'pip-tools'
       ],
