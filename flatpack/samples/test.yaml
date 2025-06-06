@@ -1,6 +1,6 @@
 inputs:
   data:
-    data_dir: ./flatpack22b
+    data_dir: ./flatpack
     ext_dir: samples
     top_cpt: cpt_top
   cal_medium_approach_rate: 0.005

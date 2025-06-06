@@ -36,7 +36,7 @@ type Vector[T] = np.ndarray[tuple[int], np.dtype[T]]
 type ArrayLike[T] = Vector[T] | Series | DataFrame
 
 
-def rn_random(size: int | tuple[int] | None = None) -> float | Vector[np.float_]:
+def rn_random(size: int | tuple[int] | None = None) -> float | Vector[np.float64]:
     """
     Get a random float or an array of floats from the [0.0, 1.0) interval
 
