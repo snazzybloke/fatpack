@@ -1,0 +1,51 @@
+inputs:
+  data:
+    data_dir: ./data
+    ext_dir: original_ext_int
+    top_cpt: cpt_top
+  cal_medium_approach_rate: 0.005
+  cal_medium_fraction: 0.26229
+  virtconts:
+    vcon_dir: ./virtual_containers
+    tot_containers: 100000
+    num_label: "100k"
+    tot_importers: 9
+
+work:
+  w_dir: ./results
+  vis_dir: ./output_plots
+  single_dir: raw
+  multi_dir: multi
+  sim_total: 100
+  old: original_ext_int_external_old
+  new: original_ext_int_external_new
+
+sensi_rates:
+  schs_daff_sensitivity: 0.93
+  cal_aa_inspect_fraction: 0.4
+  aa_frac_or_num: 0.02
+  ccv_frac_or_num: 0.005
+  cal_tailgate_daff_sensitivity: 0.8
+  cal_tailgate_aa_sensitivity: 0.6
+  daff_ccv_sensitivity: 0.3
+  rural_tailgate_aa_sensitivity: 0.5
+  rural_tailgate_daff_sensitivity: 0.8
+  cal_aa_inspection_sensitivity: 0.8
+  ccv_t_risk: null
+  ccv_prior_n: 10_000
+  ccv_prior_y: null
+  cbis_mf: null         # cbis_mf: Optional[float]=0.1,
+  cbis_cn: 10
+  cbis_tc: 4
+  csp_instead_of_schs: False
+  aa_lite_sensitivity: 0.2
+  treatment_cal_medium_effect: 0
+  treatment_non_cal_effect: 0
+  multiplier: 2
+
+to_save:
+  save_results: True
+  save_container_results: False
+  save_summary: True
+
+port_monitor: False
