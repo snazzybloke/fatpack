@@ -1,4 +1,4 @@
-# Sea/Air/Cargo Container Pathway Simulation System
+F# Sea/Air/Cargo Container Pathway Simulation System
 
 ## Introduction
 The package simulates the current and future (either with SCHS or CSP1/CSP3
@@ -145,12 +145,12 @@ Alternatively, the whole workflow can be executed from a terminal app simply wit
 > python path\_to\_/flatpack/pipeline/full\_wflow.py -y InputParameters.yaml
 
 (Note: InputParameters.yaml is just a dummy name, replace it with the actual file name).
-Finally, a browser-based GUI is provided for the ease of use via the flatpack22b/pipeline/gui\_form.py script.
+Finally, a browser-based GUI is provided for the ease of use via the flatpack/pipeline/gui\_form.py script.
 In order to run it one needs to install the streamlit package first with
 > python -m pip streamlit
 
 Then the GUI starts with
-> python -m streamlit run path\_to\_/flatpack22b/pipeline/gui\_form.py
+> python -m streamlit run path\_to\_/flatpack/pipeline/gui\_form.py
 
 
 ## Package removal
