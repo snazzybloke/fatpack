@@ -239,7 +239,7 @@ def bar_plotter(nrows: int,
     _y = 0
     for key, row in new_dict.items():
         node_name = key.replace("_", " ")
-        node_name = node_name.replace("%", "\%")
+        node_name = node_name.replace("%", r"\%")
         if "release" in node_name.lower():
             continue # skip this
         if "treatment" in node_name.lower() and "treatment" not in policy_name.lower():
