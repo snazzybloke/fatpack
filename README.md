@@ -54,10 +54,10 @@ conda create -n a\_new\_environmet.
 
 Then activate the newly created virtual environment.
 It is adviseable to upgrade the pip module (the Python package manager):
-> pip install -U pip
+> python -m pip install -U pip
 
 In the same environment install the pip-tools package using pip:
-> pip install pip-tools
+> python -m pip install pip-tools
 
 Then, from the repo folder, execute:
 > python -m piptools compile
@@ -67,11 +67,11 @@ provided with the repo.
 The new file serves to satisfy the package dependencies inside your virtual environment.
 
 Finally, we can install flatpack by executing the following command, again from the repo:
-> pip install .
+> python -m pip install .
 
 ## Unit testing
 Unit testing using is carried out using the pytest package, which can be installed with:
-> pip install pytest pytest-cov coverage
+> python -m pip install pytest pytest-cov coverage
 
 In Azure DataBricks the following bash variables should be set to execute the tests (optional elsewhere):
 > export PYTHONPYCACHEPREFIX=/tmp/pycache
@@ -145,7 +145,14 @@ Alternatively, the whole workflow can be executed from a terminal app simply wit
 > python path\_to\_/flatpack/pipeline/full\_wflow.py -y InputParameters.yaml
 
 (Note: InputParameters.yaml is just a dummy name, replace it with the actual file name).
+Finally, a browser-based GUI is provided for the ease of use via the flatpack22b/pipeline/gui\_form.py script.
+In order to run it one needs to install the streamlit package first with
+> python -m pip streamlit
+
+Then the GUI starts with
+> python -m streamlit run path\_to\_/flatpack22b/pipeline/gui\_form.py
+
 
 ## Package removal
 To remove the installed package simply execute:
-> pip uninstall flatpack
+> python -m pip uninstall flatpack
