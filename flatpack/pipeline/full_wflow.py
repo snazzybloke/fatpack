@@ -23,7 +23,7 @@ or:      python run_full_workflow.py --yaml a_input_yaml_file
 import sys
 import argparse
 from flatpack.src.config import Config
-from flatpack.preproc import medium_risk_ext, make_containers,
+from flatpack.preproc import medium_risk_ext, make_containers
 from flatpack.src import simulate_pathways, multi_simulate_pathways
 from flatpack.plot import plot_data, plot_multisim_data
 from loguru import logger
