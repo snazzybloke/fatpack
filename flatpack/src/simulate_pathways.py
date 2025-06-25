@@ -437,7 +437,7 @@ def external_risks_policy_new(name:str, vcon_file: Path, **kwargs: Unpack[Kwords
     # Level 3, release "node":
     non_cal_empty_release = release("non-CAL empty release")
     # Level 2, joining the Level 3 nodes above:
-    full_decision = attr_decision_node("SCHS yes/no",
+    full_decision = attr_decision_node("Loaded yes/no",
                                        'TypeOfGoods', {"none": non_cal_empty_release},
                                        default_node=rural_dest_decision)
     # Level 1, TOP node, joining the Level 2 nodes above (namely schs_decision and full_decision):
