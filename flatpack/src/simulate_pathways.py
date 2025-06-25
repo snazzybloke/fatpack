@@ -217,7 +217,7 @@ def external_risks_policy_new(name:str, vcon_file: Path, **kwargs: Unpack[Kwords
 
     Parameters
     ----------
-    Mostly the same as in the external_risk_policy_current() above.
+    Mostly the same as in the external_risks_policy_current() above.
     aa_frac_or_num : float | int
         For Targeted Survey (node 11) and Random Inspection (node 12), sending either number or frac
 
