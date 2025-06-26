@@ -12,6 +12,7 @@ A simple GUI form to enter simulation input parameters and execute the workflow
 """
 
 import sys
+from argparse import ArgumentParser
 from pathlib import Path
 import yaml
 from flatpack22b.src.config import Config
@@ -215,7 +216,9 @@ def run_gui() -> None | dict[str, str | bool | int | float | None | dict]:
     save_summary = st.radio("Save summary?", [False, True])
     if save_summary:
         st.write(save_summary)
-    confdic.update({"to_save": {"schs_daff_sensitivity": schs_daff_sensitivity,}})
+    confdic.update({"to_save": {"save_results": save_results,
+                                "save_container_results": save_container_results,
+                                "save_summary": save_summary}})
 
     monitor = st.radio("Port monitoring:", [False, True])
     med_col = None
@@ -228,14 +231,29 @@ def run_gui() -> None | dict[str, str | bool | int | float | None | dict]:
             return confdic
 
 
-if __name__ == "__main__":
+def main(new_yaml: Path) -> None:
+    """
+    Simply calls the run_gui() function above to receive the input config parameters
+    which are then written in the required YAML input file and executes the workflow
+
+    Parameters:
+
+    new_yaml: Path
+        the path+name of the input YAML file
+    """
     config_dic = run_gui()
     if config_dic:
         logger.info(f"\nInput configuration:\n{config_dic}")
-        with open(Path("/tmp/input.yaml"), mode="w", encoding="utf-8") as fout:
+        with open(new_yaml, mode="w", encoding="utf-8") as fout:
             yaml.dump(config_dic, fout, default_flow_style=False)
-        logger.info(r"\nFind the YAML input file: /tmp/input.yaml")
-        config: Config = Config(Path("/tmp/input.yaml"))
+        logger.info(f"\nFind the YAML input file: {new_yaml}")
+        config: Config = Config(new_yaml)
         logger.info("\nStarting the full workflow")
         full_wflow.main(config)
-    
+
+
+if __name__ == "__main__":
+    agp = ArgumentParser()
+    agp.add_argument("-yaml", "-y", required=True, help="The path/name of the new YAML input file")
+    ARG = vars(agp.parse_args())
+    main(Path(ARG["yaml"]))
