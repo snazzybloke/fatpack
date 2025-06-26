@@ -150,7 +150,7 @@ In order to run it one needs to install the streamlit package first with
 > python -m pip streamlit
 
 Then the GUI starts with
-> python -m streamlit run path\_to\_/flatpack/pipeline/gui\_form.py
+> python -m streamlit run path\_to\_/flatpack/pipeline/gui\_form.py -- -y path\_to/a\_new\_file.yaml
 
 
 ## Package removal
